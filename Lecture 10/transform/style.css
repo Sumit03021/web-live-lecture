@@ -1,0 +1,15 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    margin: 100px;
+    transition: 2s;
+}
+/* hover transform */
+div:hover{
+    /* transform: rotateX(180deg) */
+    /* transform: translate(200px,200px); */
+    /* scale(x,y) */
+    /* transform: scale(2);  */
+    transform: skew(55deg);
+}

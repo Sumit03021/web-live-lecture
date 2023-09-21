@@ -1,0 +1,50 @@
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+border: 2px solid black;
+transition-duration: 2s;
+transition-property: border-radius;
+}
+.box:hover{
+    background-color: red;
+    border-radius: 50%;
+}
+.parent{
+    height: 700px;
+    width: 600px;
+    background-color: crimson;
+    border: 2px solid black;
+ margin: 2px 0px;
+}
+.child1{
+    background-color: grey;
+    /* transition-timing-function: linear; */
+    /* constant speed */
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.child2{
+    background-color: red;
+    transition-timing-function: ease-in;
+    /* fast at end */
+
+}
+.child3{
+    background-color: blue;
+    transition-timing-function: ease-out;
+    /* slow at end */
+}
+.child4{
+    background-color: green;
+    transition-timing-function: ease-in-out;
+    /* slow fast slow at end */
+}
+.child{
+    height: 100px;
+    width: 100px;
+    color: white;
+    border: 2px solid black;
+}
+.parent:hover .child{
+    width: 100vw;
+}

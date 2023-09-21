@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.parent{
+    width: 90vw;
+    height: 90vh;
+    margin: 20px auto ;
+    display: grid;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: repeat(3,1fr); 
+    /* rest rows as like default cover  can sets by auto rows*/
+    grid-auto-rows: 100px ;
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 400px; */
+    /* grid auto flow bydefault is row so that sets columns as what you sets only defined */
+}
+.child{
+    border: 2px solid blue;
+    background-color: yellow;
+    padding: 10px;
+}
+.item3{
+    background-color: blue;
+    grid-column: span 2;
+    grid-row: span 3;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

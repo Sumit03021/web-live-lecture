@@ -1,0 +1,22 @@
+.bouncing{
+    margin: 20px auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: brown;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border: 2px solid black;
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(20px);
+    }
+    to{
+        transform: translateY(500px);
+    }
+}

@@ -1,0 +1,8 @@
+:root{
+    --by-color-red:red;
+    --font-size:45px;
+}
+h1{
+    font-size: var(--font-size);
+    color: var(--by-color-red);
+}

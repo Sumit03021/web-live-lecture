@@ -1,0 +1,23 @@
+#me{
+color: red;
+}
+#u{
+    color: blue;
+}
+#yu{
+    color: aqua;
+    background-color: red;
+    font-size: 19px;
+    text-decoration: line-through;
+}
+a{
+    color: orange;
+    background-color: blue;
+}
+a[href="https://google.com"]{
+    text-decoration: line-through;
+    font-size: 30px;
+}
+*{
+    border: 2px solid black;
+}

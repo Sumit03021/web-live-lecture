@@ -1,0 +1,29 @@
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: cursive;
+    text-align: center;
+    text-shadow: 5px 5px 12px red;
+}
+/* blur radius more value more blurness. */
+h3{
+    line-height: 30px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+li{
+    list-style-type: circle;
+    border: 1px solid red;
+    list-style-position: inside;
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border-top: 2px solid yellow;
+    border-left: 5px solid yellow;
+    border-bottom: 2px solid yellow;
+    border-right: 2px dashed black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

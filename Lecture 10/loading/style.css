@@ -1,0 +1,23 @@
+.load{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border-top: 10px solid yellow;
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    margin: 20px auto;
+
+    animation: ball 4s ease-in 0s infinite normal;
+}
+@keyframes ball{
+    0%{
+        transform: translateY(20px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(500px) rotate(180deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(360deg);
+    }
+}

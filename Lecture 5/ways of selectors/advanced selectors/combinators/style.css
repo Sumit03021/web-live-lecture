@@ -1,0 +1,24 @@
+#yukta nav h1{
+    color: grey;
+    font-size: 50px;
+    text-decoration: line-through;
+}
+/* descendent combinators
+#yukta nav h1{} //header nav h1{} // header h1{} anyone can be used. */
+/* child combinators 
+main>section>ul>.name{} //section>ul>.name{} // ul>.name{} anyone can use.
+ */
+ main>section>ul>.name{
+    font-size: 40px;
+    color: aqua;
+ }
+ /* adjacent siblings   only to adjacent sibling after h1 only.  + */
+ main article h1 + p{
+    color: red;
+    font-size: 20px;
+ }
+ /* general siblings   after h1 target to all general siblings. ~ */
+ main article h1 ~ p{
+    color: red;
+    font-size: 35px;
+ }

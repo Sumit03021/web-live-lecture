@@ -1,0 +1,48 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+    div{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 2px solid black;
+    padding: 25px;
+    margin: 25px;
+    display: inline-block;
+}
+/* position static that cannot change 
+ relative from original position of elements.
+ absolute w.r.t immediate parents/ancesstors who have any position already exists else w.r.t body changes
+  most recent positioned parents
+  fixed always w.r.t body
+  sticky w.r.t parents inside parents relative and fixed after attains. */
+.div1{
+position: static;
+left: 40px;
+top: 500px;
+}
+.div2{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.div3{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+.div4{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0px;
+    height: 20px;
+    background-color: green;
+}
+.div5{
+    position: sticky;
+    left: 30px;
+    top:  100px;
+}
