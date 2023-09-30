@@ -4,12 +4,12 @@ console.log(arr)
 //push ---- add last mein 
 let ans= arr.push(234)
 console.log(arr)
-console.log(ans)
+console.log(ans) // gives total length
 
 // pop ----- remove last
 let answer= arr.pop()
 console.log(arr)
-console.log(answer)
+console.log(answer) // gives last value that removed
 
 
 
