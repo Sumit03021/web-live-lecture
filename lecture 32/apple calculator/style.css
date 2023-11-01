@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+body{
+    background-color: rgb(32,33,36);
+}
+.container{
+    width: 360px;
+    height: 90vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid wheat;
+    border-radius: 10px;
+    padding: 5px;
+}
+.btn-grid{
+display: grid;
+flex-grow: 2;
+grid-template-rows: repeat(5,1fr);
+grid-template-columns: repeat(4,1fr);
+gap: 5px;
+}
+input{
+    flex-grow: 1;
+    background-color: rgb(32,33,36);
+    text-align: right;
+    font-size: 60px;
+    outline: none;
+    border: 0;
+    color: white;
+    padding: 0px 16px;
+}
+button{
+    border-radius: 50%;
+    width: 75%;
+    height: 90%;
+    cursor: pointer;
+    border: 0;
+    font-size: 24px;
+    background-color: grey;
+    color: white;
+    place-self: center;
+}
+.yellow-btn{
+    background-color: rgb(102, 74, 22);
+}
+.grey-btn{
+    background-color: lightgray;
+}
+.zero{
+    grid-column: span 2;
+    border-radius: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
