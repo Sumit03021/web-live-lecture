@@ -42,7 +42,7 @@ play.addEventListener('click',()=>{
 
 // range move time update
 audio.addEventListener('timeupdate',()=>{
-    let currrentprogress=audio.currentTime/100*audio.duration;
+    let currrentprogress=audio.currentTime*100/audio.duration;
     progress.value=currrentprogress;
     //progress not favicon.ico not found shown.
 })
