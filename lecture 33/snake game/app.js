@@ -75,10 +75,7 @@ function update(){
    }else{
     snakeCells.shift();
    }
-   if(newHeadX<0 || newHeadX >950 || newHeadY<0 || newHeadY>550){
-    console.log("yes")
-    direction ='left'
-   }
+   
    
 }
 

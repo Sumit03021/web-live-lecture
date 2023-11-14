@@ -1,0 +1,12 @@
+.a{
+    color: red;
+    border: 10px solid green;
+}
+.b{
+    color: brown;
+    border: 2px solid red;
+}
+.c{
+    background-color: red;
+    font-size: 40px;
+}
