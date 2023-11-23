@@ -1,0 +1,65 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+
+h1{
+    text-align: center;
+}
+input{
+    display: block;
+    width: 400px;
+    margin: 10px auto;
+    font-size: 25px;
+    padding: 10px;
+}
+button{
+    width: 120px;
+    margin: 10px auto;
+    font-size: 20px;
+    display: block;
+}
+img{
+    height: 200px;
+    width: 250px;
+    margin: 10px;
+}
+figure{
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h2,h5{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
