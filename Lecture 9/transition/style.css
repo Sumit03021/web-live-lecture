@@ -33,6 +33,7 @@ transition-property: border-radius;
     background-color: blue;
     transition-timing-function: ease-out;
     /* slow at end */
+
 }
 .child4{
     background-color: green;
@@ -44,6 +45,7 @@ transition-property: border-radius;
     width: 100px;
     color: white;
     border: 2px solid black;
+    transition-duration: 10s;
 }
 .parent:hover .child{
     width: 100vw;

@@ -3,12 +3,12 @@ h1{
     font-weight: 600;
     font-family: cursive;
     text-align: center;
-    text-shadow: 5px 5px 12px red;
+    text-shadow: 5px 5px 2px red;
 }
 /* blur radius more value more blurness. */
 h3{
     line-height: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     word-spacing: 10px;
 }
 li{

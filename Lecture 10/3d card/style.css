@@ -8,7 +8,7 @@ div{
 }
 body{
     /*  used for viewing 300px during rotating */
-    perspective: 300px;
+    perspective: 1000px;
 }
 .side-a{
     background-color: aqua;

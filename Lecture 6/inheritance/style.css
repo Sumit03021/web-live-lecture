@@ -1,5 +1,5 @@
-ul> li{
+ul li{
     border-top: 2px solid black;
-    font-size: 40px;
+    font-size: 2em;
     color: aqua;
 }

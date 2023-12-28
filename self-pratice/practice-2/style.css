@@ -1,0 +1,64 @@
+body{
+    perspective: 5000px;
+}
+*{
+    box-sizing: border-box;
+}
+section{
+    height: 300px;
+    width: 400px;
+    margin: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+.side-b{
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+.side-b img{
+    height: 100%;
+    width: 100%;
+}
+.side-a{
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    padding: 10px;
+    z-index: 10;
+    backface-visibility: hidden;
+    background-color: yellow;
+}
+section:hover{
+transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

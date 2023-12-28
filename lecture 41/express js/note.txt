@@ -1,0 +1,33 @@
+it is frameworks work to create own server.
+fast ,minimalistic(chhota code write karta hu),frameworks for node js
+npm install express/npm i express---for install expressjs packages.
+never changes into the node-modules and package-lock.json
+
+port is just like microprocessor on the server that will listen the clients request 
+port mostly 2000-9000 are mostly available to use.
+port number used by default in backend is 8080.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
