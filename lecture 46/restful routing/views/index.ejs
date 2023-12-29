@@ -13,6 +13,10 @@
     <h2><%=item.id%></h2>
     <h3><%=item.username%></h3>
     <p><%=item.comment%></p>
+    <form action="/comments/<%=item.id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+    
 <%}%>
 
 

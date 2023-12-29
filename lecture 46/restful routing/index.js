@@ -1,7 +1,7 @@
 const express=require('express');
 const app=express();
 const path=require('path');
-
+const methodOverride=require('method-override')// for put ,patch, delete methods.
 
 let comments=[
 {
@@ -34,7 +34,7 @@ app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'))
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({extended:true}))
-
+app.use(methodOverride('_method')) // use for method overriding
 //restful route a/c to tables
 //task-1  show all comments where are my comments
 app.get('/comments',(req,res)=>{
@@ -54,15 +54,37 @@ app.post('/comments',(req,res)=>{
 res.redirect('/comments')
 })
 
+//task-4 --to show particular comment in db/array
+app.get('/comments/:commentid',(req,res)=>{
+    let {commentid}=req.params
+    let foundComment=comments.find((comments)=>{return comments.id==commentid})// == flexible in number and string but === rigid in number to number ad string to string.
+    res.render('show',{foundComment})
+})
 
+//task-5 ---to show a edit form particular comment
+app.get('/comments/:commentid/edit',(req,res)=>{
+    let {commentid}=req.params
+    let foundComment=comments.find((comments)=>{return comments.id==commentid})
+    res.render('edit',{foundComment})
+})
 
+// task-6 update by using patch(partial change) and put (full change)----to actuallly edit on db/array.
+app.patch('/comments/:commentid',(req,res)=>{
+    let {commentid}=req.params
+    let foundComment=comments.find((comments)=>{return comments.id==commentid})
+    let {comment}=req.body // textarea name take as object in it. and require to method set as post
+    // then  form action is as '/comments/<%=foundComment.id%>?_method=PATCH'
+    foundComment.comment=comment
+    res.redirect('/comments')
+})
 
-
-
-
-
-
-
+//task-7 actually delete comments form the db/array.
+app.delete('/comments/:commentid',(req,res)=>{
+    let {commentid}=req.params
+    // also create form into the index.ejs file to delete comment.
+    comments=comments.filter((comment)=>{return comment.id != commentid})
+    res.redirect('/comments')
+})
 
 
 
