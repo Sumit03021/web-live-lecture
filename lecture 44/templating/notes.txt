@@ -1,0 +1,35 @@
+templating is just like a structure provide for the different datas(2 different data on same pages with same templates.)
+
+templating engine ---use to make templating---ejs,hbs,pug,jade,nunjucks etc.
+
+ejs--very similar to js--complies with express view system,static caching of templating,client side support,<% %>.
+
+<% %>---control flows ,<%= output %>, etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
