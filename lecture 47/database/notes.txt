@@ -1,0 +1,39 @@
+database--collections of information(useful datas);
+data---collection of properties(everything is the data)
+previously use file system but now use database bcoz of data redundancy(just like called for the consitency of datas example--hostel and college address not same filed by students resulted failed got offer letter on the house.)---mother problem of all the problems(all small issues)
+type of databases---2 types--sql(structured query language---in order to perform some task--ex-mysql,orade etc.)
+2. nosql---not use tables and ex--mongodb,dynomo etc. 
+dbms--database management system--software to interact with our databases--2 types
+1. rdbms--relational dbms--creates tables--sql
+2. nrdbms--nonrelational dbms---object formatted data store(no tables use in it)---nosql
+
+selection of databases criteria 3(CAP)---consistency, availability and partition tolerances..
+1. consitency---usually preferred in banking system(sql)----two person get 500rs transaction from two different mode of bank from same a/c that have only 500rs---one accepted and other declined the transactions.
+2. availability---- google analytics provide info in 20 min (exact data) and 30 min with approx exact data that is called availability of data fast use in it analytics---nosql(won)
+3. partition tolerances----amazon (1 unit phone contest) in 3 country--all contest at same time from UAE,INDIA and USA with different location and between them very far differs in distances but win only one and other not (avoided this due to partition tolernaces)---sql and nosql (both win.)
+
+type of architecture use in web applications use--
+1. monolithics---1server and 1 database
+2. micro services---multiple server and multiple databases.
+
+-------------------monogodb-----------------
+what? -----nosql,use with nodejs and express
+why---easy syntax,almost similar to js,highly compatible with react,angular and vue.
+cmd/gitbash---uses
+calling----- mongosh
+test---1+1
+"sumit"toUpperCase()
+show databases/show dbs---use for show dbs
+show collections-----show colllections that have in it any dbs
+use name of databse-----swithched to that dbs/ and also to create new dbs.---that new created dbs not show in show dbs (until atleast one collection not added into new dbs.)
+db-----locate which dbs you stand
+db.createCollection('goa')----add new collections into switched dbs
+db.goa.drop()-----remove that collection you want to remove
+db.dropDatabase()----remove database(never ever use in jobs )----------important!!!!!!
+ctrl+c----use to exit from loop of mongosh(never a back exit in it.)
+
+
+
+
+
+
