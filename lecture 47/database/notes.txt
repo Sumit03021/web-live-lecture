@@ -32,6 +32,42 @@ db.goa.drop()-----remove that collection you want to remove
 db.dropDatabase()----remove database(never ever use in jobs )----------important!!!!!!
 ctrl+c----use to exit from loop of mongosh(never a back exit in it.)
 
+--------------------make class databases------------
+use class
+db class
+db.students.insertOne({name:"sumit",rollNo:1})
+db.students.insertMany([{},{},{}])
+db.students.updateOne({name:'search by name'},{$set:{rollNo:12}})
+db.students.updateMany({name:same name},{$set:{rollNo:multi set same roll no}})
+db.students.find()------get all data that inserted
+db.students.find({name:'sumit'})-----found by name ,rollNo etc.
+db.students.deleteOne({name:'sumit'})---delete that one
+db.students.deleteMany({})---delete all
+db.students.deleteOne({})----delete first one data
+$eq==equal,$gt===greater,$gte===greater and equal
+$lt==less than,$lte==less than equal
+db.students.find({rollNo:{$gt:5}})
+db.students.find({$and:[{rollNo:{$gt:5}},{rollNo:{$lte:20}}]})
+same for $or and $and case using in it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

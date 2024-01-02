@@ -1,7 +1,17 @@
 const express=require('express')
 const app=express()
 const mongoose=require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/class')
+// schema always created as objects and then new schema with any name for the model
+const {Schema}=mongoose
+const students=new Schema({
+    name:String,
+    rollNo:Number
+})
+// then create model in which first word use should be capitalise that show on model,other is the that name which taken as new schema objects .
+const student=mongoose.model('Student',students)
+mongoose.connect('mongodb://127.0.0.1:27017/try')
+let student1=new student({name:'sumit',rollNo:1})
+student1.save()
 app.use(express.json())
 app.get('/',(req,res)=>{
     res.send("hello world")
