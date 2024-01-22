@@ -1,0 +1,35 @@
+authentication-----login/signup
+hashing ---SHA 256 works as (hello!@  sumit@123 ects....)
+password time to crack by the hackers---256 good time takes
+
+common password can be cracked and then also risk for the other that have same passwords.
+
+password + salt = give strongest security password(hashing algorithms.)
+
+hashing +salt done by tools---passportjs(authenticate for nodejs)
+passportjs have 500+ types of strategies for hashing and salt protections etc.---we use passport-local strategy and passport-local-mongoose.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
