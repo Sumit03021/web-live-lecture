@@ -1,0 +1,31 @@
+validation ---- entry password
+validation 2 types----client side, server side
+1. clinet side validation steps
+a. if required word inserted in the input type field of news.ejs that need compulsory
+(browser run validation by default)
+b. but if novalidate word inserted in the form type of news.ejs (then browser not to that validate work by default.)
+ 
+ for that use the 3rd party validation like bootstarps.
+needs-validations etc.
+
+2. server side validation----- for protection from data come from client side donot attack on server's api
+
+a. by install joi (3rd party package)---joi.dev(official documentations)
+---powerfull schema description language.
+i. create first schema based on joi
+ii. validate from joi.
+create productschema and reviewschema in the schema.js
+validate before the add the products and reviews in the datas----use middleware.js for that.
+
+---------cookies and sessions--------
+
+
+
+
+
+
+
+
+
+
+

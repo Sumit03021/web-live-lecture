@@ -1,0 +1,17 @@
+
+---------cookies and sessions--------
+cookies is basically client side storage of personalize data as object not important data(username,password,credit card etc ) but store your interests , preferences to deliver next time good preference as your requriments(personalized tracking devices) and stateful (depends on the previous requests.)
+
+session- storage also a client side storage
+
+session is the server side storages.
+
+never store the important info in the cookies for increase more security of cookies ---use signed cookies...(but it also limited secured)
+---app.use(cookiesParser('put your secret words to secure it));
+
+flash repeatedly used so that can be replaced by use locals (that can be access through out the access.)---as middleware app.use(req,res,next)
+
+
+
+
+
