@@ -1,4 +1,15 @@
+configsession {
+  cookie:{
+    httpOnly:true,
+    expires:date.now() +7*24*60*60*1000,
+    maxAge:same-date.now()
+  }
+}
 
+also admin and buyer differences
+isSeller middleware for new,edit,delete and also product schema added auther feature for access(user._id)
+
+isProductauther--edit , and delete pages and also check seller is other or that one who add this ---product.auther and req.user._id always will be same.
 
 
 

@@ -1,0 +1,31 @@
+like and wishlist for the user
+ajax request post---for not refreshing and reloading the pages again.
+$addToSet ---use to add data into db if not added
+$put ----use to remove one or more data from db if it is in array db.
+
+user--wishlist feature in model(ref:product)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
