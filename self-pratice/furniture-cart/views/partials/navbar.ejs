@@ -1,0 +1,196 @@
+<nav class="navbar1">
+  <div class="navbar-brand1">
+    <span>Furniture Cart</span>
+  </div>
+ 
+    <div class="navbar-other1">
+      <div class="nav1 nav-home1">
+        <a href="/">Home</a>
+      </div>
+        <div class="nav1 nav-address1">
+        <i class="fa-solid fa-location-dot" style="color: white;"></i>
+        <span>Delivered to India</span>
+        </div>
+    
+    <%if(currentUser && currentUser.role == 'seller'){%>
+
+      <div class="nav1 nav-new1">
+        <a href="/products/new">New</a>
+      </div>
+   <% }%>
+    <div class="nav1 nav-input-search1">
+      <form class="d-flex" action="/products/search" method="POST">
+        <input type="text" placeholder="Search for Products" name="searched">
+        <button><i class="nav-search-icon1 fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      
+    </div>
+   <% if(currentUser){ %>
+<a href="/user/cart" style="text-decoration: none;" >
+
+  <div class="nav1 nav-cart1">
+    <i class="fas fa-shopping-cart"></i>
+    <sup><span class="badge bg-danger"><%=currentUser.cart.length%></span></sup>
+  </div>
+</a>
+      <div class="nav1 nav-account1">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%=currentUser.firstName.toUpperCase()%>
+          </a>
+          <ul class="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            <li><a class="dropdown-item" href="#">My Wishlist</a></li>
+            <li><a class="dropdown-item" href="/checkout/<%=currentUser._id%>">My Orders</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </div>
+   <% }else{%>
+    <div class="nav1">
+      <a href="/login">Login</a>
+    </div>
+    <div class="nav1">
+      <a href="/register">Register</a>
+    </div>
+   <%}%>
+    </div>
+  </div>
+</nav>
+
+<div class="lower-navbar1">
+  <div class="lower-nav1 lower-nav-all" id="open-nav-sidebar1">
+    <i class="fa-solid fa-bars" style="color: white;"></i>
+  <span>All</span>
+  </div>
+  <div class="lower-nav1 lower-nav-1">
+  <a href="/Office-Furniture"><span>Office Furniture</span></a> 
+  </div>
+  <div class="lower-nav1 lower-nav-2">
+<a href="/Hotel-Furniture"><span>Hotel Furniture</span></a>
+  </div>
+  <div class="lower-nav1 lower-nav-3">
+<a href="/Restaurant-Furniture"><span>Restaurant Furniture</span></a>
+  </div>
+  <div class="lower-nav1 lower-nav-4">
+<a href="/Shop-Furniture"><span>Shop Furniture</span></a>
+  </div>
+  <div class="lower-nav1 lower-nav-5">
+<a href="/Kitchen-Furniture"><span>Kitchen Furniture</span></a>
+  </div>
+  <div class="lower-nav1 lower-nav-6">
+<a href="/Kids-Furniture"><span>Kids Furniture</span></a>
+  </div>
+  <div class="lower-nav1 lower-nav-7">
+<a href="/Outdoor-Furniture"><span>Outdoor Furniture</span></a>
+  </div>
+</div>
+<div class="sidebar-container1" id="sidebar-show1">
+  <div class="sidebar-left1">
+    <div class="sidebar-top1">
+        <i class="fa-solid fa-circle-user fa-xl"></i>
+       <% if(currentUser){ %>
+        <h2>Hello, <span><%=currentUser.firstName.toUpperCase()%></span></h2>
+      <%  }else{ %>
+          <h2>Hello, <span>Sign in</span></h2>
+       <% } %>
+    </div>
+    <div class="sidebar-wrap1">
+        <div class="sidebar-item1">
+          <h2>Office Furniture</h2>
+            <a href=""><p>Office Desks</p></a>
+            <a href=""><p>Office chairs</p></a>
+            <a href=""><p>Executive Chairs</p></a>
+            <a href=""><p>Office Stools</p></a>
+            <a href=""><p>Office Storage units</p></a>
+            <a href=""><p>Office Workstations</p></a>
+        </div>
+        <div class="sidebar-item1">
+          <h2>Hotel Furniture</h2>
+            <a href=""><p>Hotel Bedrooms</p></a>
+            <a href=""><p>Monoblock Kitchen</p></a>
+            <a href=""><p>Hotel Sofas</p></a>
+            <a href=""><p>Hotel Wardrobes</p></a>
+            <a href=""><p>Hotel Headboards</p></a>
+            <a href=""><p>Hotel Desks</p></a>
+        </div>
+        <div class="sidebar-item1">
+          <h2>Restaurant Furniture</h2>
+            <a href=""><p>Restaurant Chairs</p></a>
+            <a href=""><p>Restaurant Tables</p></a>
+            <a href=""><p>Monoblock Canteen Tables</p></a>
+            <a href=""><p>Restaurant Booths</p></a>
+            <a href=""><p>Wine Storage</p></a>
+        </div>
+        <div class="sidebar-item1">
+          <h2>Shop Furniture</h2>
+          <a href=""><p>Shop Furnishings</p></a>
+          <a href=""><p>Hairdressers Chairs</p></a>
+          <a href=""><p>Retail Display units</p></a>
+          <a href=""><p>Retail Display Cases</p></a> 
+        </div>
+        <div class="sidebar-item1">
+          <h2>Kitchen Furniture</h2>
+          <a href=""><p>Kitchen</p></a>
+          <a href=""><p>Mini Kitchen</p></a>
+          <a href=""><p>Kitchen Freestanding units</p></a>
+          <a href=""><p>Kitchen Worktops</p></a>
+          <a href=""><p>Cookers</p></a>
+      </div>
+      <div class="sidebar-item1">
+        <h2>Kids Furniture</h2>
+        <a href=""><p>Kids Bedrooms</p></a>
+        <a href=""><p>kids Sofas and Armchairs</p></a>
+        <a href=""><p>kids Table and Chairs</p></a>
+    </div>
+    <div class="sidebar-item1">
+      <h2>Outdoor Furniture</h2>
+      <a href=""><p>Gardens Sofas</p></a>
+      <a href=""><p>Gardens Armchairs</p></a>
+      <a href=""><p>Gardens Tables</p></a>
+      <a href=""><p>Gardens Benches</p></a>
+      <a href=""><p>Gardens Daybeds</p></a>
+      <a href=""><p>Low Lounge Chairs</p></a>   
+  </div>
+  <div class="sidebar-item1">
+          <h2>Helps & Settings</h2>
+          <a href=""><p>Your Account</p></a>
+          <a href=""><p>Customer Service</p></a>
+          <%  if(currentUser){ %>
+          <a href=""><p>Sign out</p></a>
+          <%  }else{ %>
+          <a href=""><p>Sign in</p></a>
+          <% } %> 
+  </div>
+</div>
+</div>
+  <div id="sidebar-close1">
+    <i class="fa-regular fa-circle-xmark" style="color: #edeff3;"></i>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

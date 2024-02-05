@@ -42,13 +42,29 @@ router.post('/user/:productId/add', isLoggedIn, async (req,res)=>{
   let {productId} =req.params;
   let userId = req.user._id;
   let user = await User.findById(userId);
-  let product = await Product.findById(productId)
-  user.cart.push(product);
+  let product = await Product.findById(productId);
+  await user.cart.push(product);
   await user.save();
-  res.redirect('/user/cart');
+  console.log(user.cart)
+  req.flash('success',`${product.name} add to cart successfully.`)
+  res.redirect(`/products/${productId}`);
 })
 
-
+router.delete('/user/cart/:id' ,isLoggedIn, async(req,res)=>{
+  try{
+    let {id} = req.params;
+    let userId = req.user._id;
+    let user = await User.findById(userId);
+    let product = await Product.findById(id);
+    user.cart.pop(product);
+    await user.save();
+    req.flash('success',`${product.name} deleted from cart successfully.`)
+     res.redirect('/user/cart')
+  }
+  catch(e){
+      res.status(500).render('error' , {err:e.message});
+  }
+})
 
 
 
