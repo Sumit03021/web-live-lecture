@@ -1,0 +1,115 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+<div class="position-item1 row mt-5 mx-2">
+  <div class="col-lg-6">
+    <div class="card">
+      <img src="<%=foundProduct.frontImg%>" alt="" class="img-fluid">
+    </div>
+     <div>
+      <img class="img-thumbnail" src="<%=foundProduct.frontImg%>" alt="" style="max-height: 100px;max-width: 100px; margin: 0.25rem;" >
+     <% for(let item of foundProduct.backImg){ %>
+        <img class="img-thumbnail" src="<%=item%>" alt="" style="max-height: 100px;max-width: 100px; margin: 0.25rem;" >
+     <% } %>
+     </div>
+  </div>
+  <div class="col-lg-5">
+  <div class="mb-3">
+   <h5 class="card-title mt-1"><%=foundProduct.name%></h5>
+   <h5 class="card-title mt-1">Rs.: <%=foundProduct.price%></h5>
+   <form action="/user/<%=foundProduct._id%>/add" method="POST" >
+    <button class="btn btn-success">Add to Cart</button>
+   </form>
+  </div>
+    <h2 class="display-5 mt-1">Leave your review</h2>
+    <form action="/products/<%= foundProduct._id %>/review" method="POST">
+        <div class="mb-3">
+            <!-- <label class="form-label" for="stars">Rating: </label> -->
+            <fieldset class="starability-basic">
+                <!-- <legend>First rating:</legend> -->
+                <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                <input type="radio" id="first-rate1" name="rating" value="1" />
+                <label for="first-rate1" title="Terrible">1 star</label>
+                <input type="radio" id="first-rate2" name="rating" value="2" />
+                <label for="first-rate2" title="Not good">2 stars</label>
+                <input type="radio" id="first-rate3" name="rating" value="3" />
+                <label for="first-rate3" title="Average">3 stars</label>
+                <input type="radio" id="first-rate4" name="rating" value="4" />
+                <label for="first-rate4" title="Very good">4 stars</label>
+                <input type="radio" id="first-rate5" name="rating" value="5" />
+                <label for="first-rate5" title="Amazing">5 stars</label>
+              </fieldset>
+            <!-- <input class="form-control" type="range" min="0" max="5" id="stars" name="rating"> -->
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="comment">Comment: </label>
+            <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+        </div>
+        <button class="btn btn-sm btn-success">Submit</button>
+    </form>
+</div>
+</div>
+
+
+<!-- 
+
+
+  <div class="col-lg-4 mt-5">
+    <h2 class="display-5">Leave your review</h2>
+    <form action="/products/<%=foundProduct._id%>/review" method="POST">
+        <div class="mb-3">
+            <label class="form-label" for="stars">Rating: </label>
+            <input class="form-control" type="range" min="0" max="5" id="stars" name="rating">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="comment">Comment: </label>
+            <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+        </div>
+        <button class="btn btn-sm btn-success">Submit</button>
+    </form>
+</div>
+</div>
+<div class="row mt-5">
+  <div class="col-lg-5 mt-2">
+ <% for(let id of foundProduct.reviews){ %>
+  <h4>Name: <%=id.userId.firstName%>&nbsp<%=id.userId.lastName%></h4>
+    <h4>Rating: <%=id.rating%></h4>
+    <p>Comment: <%=id.comment%></p>
+ <% } %>
+  </div>
+</div> -->
+<div class="row mt-5">
+  <div class="col-10 mt-4 mx-auto border">
+    <h5 class="card-title mt-1">Description:</h5>
+    <h6 class="card-title mt-1">Type of Furniture: <%=foundProduct.type.toUpperCase()%>%></h5>
+    <h6 class="card-title mt-1">Category: <%=foundProduct.category.toUpperCase()%></h6>
+    <h6 class="card-title mt-1">Collection: <%=foundProduct.myCollection.toUpperCase()%></h6>
+    <h6 class="card-title mt-1">Designer: <%=currentUser.firstName.toUpperCase()%></h6>
+    <p class="card-text mt-1"><%=foundProduct.about%></p>
+  </div>
+</div>
+
+
+<!-- reviews that saved and shown -->
+<div class="row mt-2 mx-2">
+  <div class="col-lg-3">
+    <% for(let review of foundProduct.reviews){ %>
+    <div class="card">
+           <div class="card-body">
+            <h5><%=review.userId%></h5>
+               <p class="starability-result" data-rating="<%=review.rating%>">
+                   Rated: <%=review.rating%> stars
+                </p>
+             <!-- <h5 class="card-title">Special title treatment</h5> -->
+             <p class="card-text">Comment: <%=review.comment%></p>
+             <%if(review.createdAt){%>
+               <p class="text-muted"> <%=review.createdAt.toDateString()%></p>
+             <%}%>
+             <button class="btn btn-danger">Delete</button>
+           </div>
+         </div>
+      <% } %>
+   </div>
+  </div>
+<script src="/js/common.js"></script>
+<%-include('../partials/footer')%>

@@ -11,6 +11,8 @@ body{
 body::-webkit-scrollbar{
   display: none;
 }
+
+/* navbar */
 .navbar1{
   height: 65px;
   width: 100vw;
@@ -33,7 +35,7 @@ body::-webkit-scrollbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 82%;
+  width: 83%;
 }
 .nav1{
   margin: 0.25rem 0.5rem;
@@ -49,9 +51,9 @@ body::-webkit-scrollbar{
   border-radius: 0.25rem;
 }
 
-.nav-home1{
+/* .nav-home1{
   margin-left: 1rem;
-}
+} */
 .nav-address1{
   color: grey;
   font-size: 1rem;
@@ -124,7 +126,8 @@ body::-webkit-scrollbar{
 .dropdown-menu1 a{
   color: #000000!important;
 }
-/* lower navber */
+
+/* lower navbar */
 .lower-navbar1{
   position: relative;
   top: 65px;
@@ -150,6 +153,8 @@ padding: 0.25rem 0.75rem;
   border: 1px solid white;
   border-radius: 0.25rem;
 }
+
+/* sidebar content */
 .sidebar-container1{
   position: fixed;
   top: 65px;
@@ -219,4 +224,59 @@ padding: 0.25rem 0.75rem;
   margin-left: 0.625rem;
   margin-top: 0.625rem;
   cursor: pointer;
+}
+
+/* furniture */
+.upper-filter1{
+  border-right: 3px solid rgb(194, 187, 187);
+}
+.filter1{
+  margin: 1rem 0rem;
+}
+.lower-filter1{
+  margin-left: 6rem;
+}
+.upper-heading1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: auto;
+  text-align: center;
+}
+.heading1{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 0.5rem 0rem 1rem;
+}
+
+/* user interface */
+.user1{
+  background-color: white;
+}
+.above-user1{
+  padding: 0.5rem 0rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color:black;
+  text-align: center;
+}
+.above-user1 i{
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 0.25rem;
+}
+.upper-heading1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: grey;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+.heading1{
+  font-size: 1rem;
+  color: black;
+  padding: 0.25rem;
+  text-align: center;
 }

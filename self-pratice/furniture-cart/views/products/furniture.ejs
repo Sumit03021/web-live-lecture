@@ -1,0 +1,118 @@
+<%-include('../partials/header')%>
+  <%-include('../partials/navbar')%>
+    <%-include('../partials/flash')%>
+
+
+      <section class="container-fluid position-item1 mt-2">
+        <div class="row g-3">
+          <div class="col-3">
+            <div class="row g-3">
+              <div class="upper-filter1 col-12">
+                <h6 class="upper-heading1">Filter</h6>
+                <div class="filter1">
+                  <h6 class="heading1">Category</h6>
+                  <label for="cat"></label>
+                  <input type="radio" name="category" id="cat">
+                </div>
+                <div class="filter1">
+                  <h6 class="heading1">Collections</h6>
+                  <form action="/furniture/collection" method="POST">
+                    <div class="lower-filter1">
+                      <label for="coll">Anthony</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Ayesha</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Ayush</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Manish</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Saif</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Sameer</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Tiramoli</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+  
+                    <div class="lower-filter1">
+                      <label for="coll">Tiramolla</label>
+                      <input type="radio" name="myCollection" id="coll">
+                    </div>
+                    <button>Add</button>
+                  </form>  
+                </div>
+                <div class="filter1">
+                  <h6 class="heading1">Price</h6>
+                  <div class="lower-filter1">
+                   <% for(let i=0;i<products.length-products.length-1;i++){ %>
+
+                      <a href="/furniture/<%=products[i].type%>/high"><button>low to high</button></a>
+                   <% } %>
+                
+                  </div>
+                  <div class="lower-filter1">
+                  <a href="/furniture/Office-Furniture/high"><button>high to low</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9">
+            <div class="row g-3">
+              <% for(let item of products){ %>
+                <div class="col-4">
+                  <div class="card">
+                    <img src="<%=item.frontImg%>" alt="">
+                    <div class="card-body">
+                      <h5 class="d-inline card-title">
+                        <%=item.name%>
+                      </h5>
+                      <span class="btn like-btn" productId="<%=item._id%>">
+                        <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
+                          <i class="fa-solid fa-heart"></i>
+                          <% }else{ %>
+                            <i class="fa-regular fa-heart"></i>
+                            <% } %>
+                      </span>
+                      <h5 class="card-title">Rs. <%=item.price%>
+                      </h5>
+                      <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+                      <% if(currentUser && currentUser.role=='seller' ){ %>
+                        <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+                        <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
+                          <button class="btn btn-danger">Delete</button>
+                        </form>
+                        <% } %>
+                    </div>
+                  </div>
+                </div>
+                <% } %>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </section>
+      <script src="/js/common.js"></script>
+      <%-include('../partials/footer')%>

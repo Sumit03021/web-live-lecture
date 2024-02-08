@@ -35,10 +35,12 @@ router.get('/furniture/:type/high',async(req,res)=>{
   // res.send('ok')
 })
 
-router.post('/furniture/collection',async(req,res)=>{
-  let {myCollection} = req.body;
-  console.log(myCollection)
-  res.send('ok')
+router.post('/furniture/:type/:collection',async(req,res)=>{
+  let {type,collection} = req.params;
+  // let {myCollection} = req.body;
+  let products = await Product.find({$and:[{type:`${type}`},{myCollection:`${collection}`}]});
+  // console.log(myCollection)
+  res.render('products/furniture',{products})
 })
 
 

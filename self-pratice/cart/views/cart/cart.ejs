@@ -1,0 +1,46 @@
+<%-include('../partials/header')%>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+
+<div class="row mt-5">
+  <div class="col-lg-7 product-card mt-5">
+
+    <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
+      <% for(let item of user.cart){ %>
+              <img class="img" src="<%=item.frontImg%>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h3 class="card-title text-center"> <%= item.name %> </h3>
+                <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                <!-- <p class="card-text"> <%= item.about %> </p> -->
+                <form action="/user/cart/<%=item._id%>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger">Delete</button>
+                </form>
+                <!-- <form action="/user/<%=item._id%>/addmore" method="POST"> -->
+                <button><i class="minus1 fa-solid fa-minus"></i></button>
+                <div class="d-inline quantity1">Quantity: 1</div>
+                <button><i class="plus1 fa-solid fa-plus"></i></button>
+                <!-- </form> -->
+              </div>
+              <% } %>
+          </div>
+  </div>
+  <!-- total amount -->
+  <div class="col-lg-4 mt-5">
+    <h2 class="display-5">Checkout Page</h2>
+  <%  for(let item of user.cart){ %>
+        <div class="mb-3">
+          <h3><%= item.name%>  &nbsp &nbsp <%=item.price%></h3>
+        </div>
+        <%  } %>
+        <div class="mb-3">
+          <h2>Total Amount: Rs. <%=totalAmount%></h2>
+        </div>
+        <div class="mb-3">
+          <a href="/checkout/<%=user._id%>"><button class="btn btn-sm btn-success">Check out</button></a>
+        </div>
+
+
+</div>
+</div>
+<!-- <script src="/js/cart.js"></script> -->
+<%-include('../partials/footer')%>
