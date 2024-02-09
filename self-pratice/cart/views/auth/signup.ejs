@@ -1,11 +1,11 @@
 <%-include('../partials/header')%>
 <%-include('../partials/navbar')%>
 
-<div class="row" style="margin-top: 80px;">
-  <div class="col-6 g-3 mx-auto">
-    <h1 class="display-6">SignUp Form</h1>
+<div class="form1 signup-form1 row">
+  <div class="col-12">
+    <h1 class="display-6 text-center">Sign Up</h1>
       <form action="/register" method="POST">
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-4">
             <div class="col-2">
                 <label for="first" class="form-label">Firstname: </label>
             </div>
@@ -13,7 +13,7 @@
                 <input type="text" class="text-center form-control" name="firstName" id="first" placeholder="Firstname of the User" required>
             </div>
         </div>
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-2">
             <div class="col-2">
                 <label for="last" class="form-label">Lastname: </label>
             </div>
@@ -21,7 +21,7 @@
                 <input type="text" class="text-center form-control" name="lastName" id="last" placeholder="Lastname of the User">
             </div>
         </div>
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-2">
             <div class="col-2">
                 <label for="username" class="form-label">Username: </label>
             </div>
@@ -29,7 +29,7 @@
                 <input type="text" class="text-center form-control" name="username" id="username" placeholder="Username of the User" required>
             </div>
         </div>
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-2">
             <div class="col-2">
                 <label for="email" class="form-label">Email: </label>
             </div>
@@ -37,7 +37,7 @@
                 <input type="email" class="text-center form-control" name="email" id="email" placeholder="Email address of the User" required>
             </div>
         </div>
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-2">
             <div class="col-2">
                 <label for="phone" class="form-label">Mobile No.: </label>
             </div>
@@ -45,7 +45,7 @@
                 <input type="tel" class="text-center form-control" name="phoneNumber" id="phone" placeholder="Mobile Number of the User" required>
             </div>
         </div>
-        <div class="row g-3 align-items-center mt-1">
+        <div class="row g-1 align-items-center mt-2">
             <div class="col-2">
                 <label for="password" class="form-label">Password: </label>
             </div>
@@ -53,8 +53,7 @@
                 <input type="password" class="text-center form-control"  name="password" id="password" placeholder="Password of the User" required>
             </div>
         </div>
-        <div class="row align-items-center mt-1">
-              
+        <div class="row align-items-center mt-2">  
             <div class="col-12">
                 <span>Want to register as: </span>
                   <label for="role" class="form-label mx-5">Buyer: </label>
@@ -63,9 +62,12 @@
                   <input class="form-check-input" type="radio" name="role" id="role" placeholder="Role of the User" value="seller" required>
             </div>
         </div>
-        
-          <button type="submit" class="btn btn-sm btn-success mt-1">Sign Up</button>
-          <p class="mt-1 mx-2">Do you have an account? <a href="/login">Login Now</a></p>
+        <div class="row g-1 align-items-center justify-content-center mt-3">
+            <div class="col-2">
+                <button type="submit" class="btn1 view-btn1 border">Sign Up</button>
+            </div>
+        </div>
+        <p class="mt-2">Do you have an account? <a href="/login">Login Now</a></p>
       </form>
   </div>
 </div>

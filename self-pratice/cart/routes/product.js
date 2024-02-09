@@ -43,9 +43,12 @@ router.post('/products',isLoggedIn ,isSeller ,validateProduct ,async(req,res)=>{
 router.get('/products/:id',isLoggedIn ,async(req,res)=>{
   try{
     let {id} = req.params;
-    let foundProduct = await Product.findById(id).populate('reviews');
-    // let review = await foundProduct.populate('userId')
-    res.render('products/show',{foundProduct})
+    let foundProduct = await Product.findById(id).populate({path:'reviews',populate:{path:'userId'}}).populate('author');
+    // console.log(foundProduct.author.firstName)
+    let products =await Product.find({$or:[{type:`${foundProduct.type}`},{category:`${foundProduct.category}`},{myCollection:`${foundProduct.myCollection}`}]});
+    // let review = await Product.reviews.populate('userId')
+    // console.log(foundProduct.reviews.userId.firstName)
+    res.render('products/show',{foundProduct,products});
   }
   catch(e){
     res.status(500).render('error',{error:e.message});

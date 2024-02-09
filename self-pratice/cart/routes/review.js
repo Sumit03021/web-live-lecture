@@ -23,6 +23,17 @@ router.post('/products/:id/review',isLoggedIn ,validateReview ,async(req,res)=>{
   }
 })
 
+router.delete('/review/:id',isLoggedIn ,async(req,res)=>{
+  try{
+    let {id} = req.params;
+    await Review.findByIdAndDelete(id);
+    res.redirect('/products')
+  }
+  catch(e){
+    res.status(500).render('error',{error:e.message})
+  }
+  
+})
 
 
 

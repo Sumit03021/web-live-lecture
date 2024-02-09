@@ -2,90 +2,20 @@
 <%-include('../partials/navbar')%>  
 <%-include('../partials/flash')%>
 
-
-<!-- <section class="container-fluid position-item1 mt-2">
-<div class="d-flex">
-<%  for(let item of products){ %>
- <% if(item.type === 'Office-Furniture'){ %>
-  <div>
-    <div class="card">
-      <img src="<%=item.frontImg%>" alt="">
-    <div class="card-body">
-    <h5 class="d-inline card-title"><%=item.name%></h5>
-    <span class="btn like-btn" productId="<%=item._id%>">
-      <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
-       <i class="fa-solid fa-heart"></i>
-      <% }else{ %>
-       <i class="fa-regular fa-heart"></i>
-      <% } %>
-    </span>
-    <h5 class="card-title">Rs. <%=item.price%></h5>
-    <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
-  <%  if(currentUser && currentUser.role == 'seller'){ %>
-      <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
-      <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-        <button class="btn btn-danger">Delete</button>
-      </form>
-   <% } %>
-    </div>
-    </div>
-  </div>
-<%  } %>
- <% } %>
-    
-
-</div>
-
-
-</section> -->
-
 <section class="container-fluid position-item1 mt-2">
 <div class="product-list1">
  <div class="product-item1">
   <h6>Office Furniture</h6>
+  <a href="/Office-Furniture"><button class="view-all-btn1 btn1">View All</button></a>
  </div>
- <% for(let item of products){ %>
-  <div class="d-flex flex-row">
-  <% if(item.type === 'Office-Furniture'){ %>
-  <div class="card1">
-        <img src="<%=item.frontImg%>" alt="">
-   <div class="card-body1">
-    <h5 class="d-inline card-title"><%=item.name%></h5>
-    <span class="btn like-btn" productId="<%=item._id%>">
-      <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
-       <i class="fa-solid fa-heart"></i>
-      <% }else{ %>
-       <i class="fa-regular fa-heart"></i>
-      <% } %>
-    </span>
-    <h5 class="card-title">Rs. <%=item.price%></h5>
-    <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
-  <%  if(currentUser && currentUser.role == 'seller'){ %>
-      <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
-      <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-        <button class="btn btn-danger">Delete</button>
-      </form>
-   <% } %>
-   </div>
-  </div>
-  </div>
-  <% } %>  
- <% } %>
-</div>
-</section>
-
-<section class="container-fluid position-item1 mt-2">
-  <div class="product-list1">
-   <div class="product-item1">
-    <h6>Hotel Furniture</h6>
-   </div>
-   <% for(let item of products){ %>
+ <div class="upper-card1">
+  <% for(let item of products){ %>
     <div class="d-flex flex-row">
-    <% if(item.type === 'Hotel-Furniture'){ %>
+    <% if(item.type === 'Office-Furniture'){ %>
     <div class="card1">
-          <img src="<%=item.frontImg%>" alt="">
-     <div class="card-body1">
-      <h5 class="d-inline card-title"><%=item.name%></h5>
+          <img class="card-img1" src="<%=item.frontImg%>" alt="">
+     <div class="card-body1 text-center">
+      <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
       <span class="btn like-btn" productId="<%=item._id%>">
         <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
          <i class="fa-solid fa-heart"></i>
@@ -94,11 +24,11 @@
         <% } %>
       </span>
       <h5 class="card-title">Rs. <%=item.price%></h5>
-      <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+      <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
     <%  if(currentUser && currentUser.role == 'seller'){ %>
-        <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+        <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
         <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn1 delete-btn1">Delete</button>
         </form>
      <% } %>
      </div>
@@ -107,20 +37,24 @@
     <% } %>  
    <% } %>
   </div>
+ </div>
+ 
 </section>
 
 <section class="container-fluid position-item1 mt-2">
-    <div class="product-list1">
-     <div class="product-item1">
-      <h6>Restaurant Furniture</h6>
-     </div>
-     <% for(let item of products){ %>
+  <div class="product-list1">
+   <div class="product-item1">
+    <h6>Hotel Furniture</h6>
+    <a href="/Hotel-Furniture"><button class="btn1 view-all-btn1">View All</button></a>
+   </div>
+   <div class="upper-card1">
+    <% for(let item of products){ %>
       <div class="d-flex flex-row">
-      <% if(item.type === 'Restaurant-Furniture'){ %>
+      <% if(item.type === 'Hotel-Furniture'){ %>
       <div class="card1">
-            <img src="<%=item.frontImg%>" alt="">
-       <div class="card-body1">
-        <h5 class="d-inline card-title"><%=item.name%></h5>
+            <img class="card-img1" src="<%=item.frontImg%>" alt="">
+       <div class="card-body1 text-center">
+        <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
         <span class="btn like-btn" productId="<%=item._id%>">
           <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
            <i class="fa-solid fa-heart"></i>
@@ -129,11 +63,11 @@
           <% } %>
         </span>
         <h5 class="card-title">Rs. <%=item.price%></h5>
-        <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+        <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
       <%  if(currentUser && currentUser.role == 'seller'){ %>
-          <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+          <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
           <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn1 delete-btn1">Delete</button>
           </form>
        <% } %>
        </div>
@@ -141,21 +75,24 @@
       </div>
       <% } %>  
      <% } %>
-    </div>
+   </div>
+  </div>
 </section>
 
 <section class="container-fluid position-item1 mt-2">
-      <div class="product-list1">
-       <div class="product-item1">
-        <h6>Shop Furniture</h6>
-       </div>
-       <% for(let item of products){ %>
+    <div class="product-list1">
+     <div class="product-item1">
+      <h6>Restaurant Furniture</h6>
+      <a href="/Restaurant-Furniture"><button class="view-all-btn1 btn1">View All</button></a>
+     </div>
+     <div class="upper-card1">
+      <% for(let item of products){ %>
         <div class="d-flex flex-row">
-        <% if(item.type === 'Shop-Furniture'){ %>
+        <% if(item.type === 'Restaurant-Furniture'){ %>
         <div class="card1">
-              <img src="<%=item.frontImg%>" alt="">
-         <div class="card-body1">
-          <h5 class="d-inline card-title"><%=item.name%></h5>
+              <img class="card-img1" src="<%=item.frontImg%>" alt="">
+         <div class="card-body1 text-center">
+          <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
           <span class="btn like-btn" productId="<%=item._id%>">
             <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
              <i class="fa-solid fa-heart"></i>
@@ -164,11 +101,11 @@
             <% } %>
           </span>
           <h5 class="card-title">Rs. <%=item.price%></h5>
-          <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+          <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
         <%  if(currentUser && currentUser.role == 'seller'){ %>
-            <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+            <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
             <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn1 delete-btn1">Delete</button>
             </form>
          <% } %>
          </div>
@@ -176,21 +113,25 @@
         </div>
         <% } %>  
        <% } %>
-      </div>
+     </div>
+     
+    </div>
 </section>
 
 <section class="container-fluid position-item1 mt-2">
-        <div class="product-list1">
-         <div class="product-item1">
-          <h6>Kitchen Furniture</h6>
-         </div>
-         <% for(let item of products){ %>
+      <div class="product-list1">
+       <div class="product-item1">
+        <h6>Shop Furniture</h6>
+        <a href="/Shop-Furniture"><button class="view-all-btn1 btn1">View All</button></a>
+       </div>
+       <div class="upper-card1">
+        <% for(let item of products){ %>
           <div class="d-flex flex-row">
-          <% if(item.type === 'Kitchen-Furniture'){ %>
+          <% if(item.type === 'Shop-Furniture'){ %>
           <div class="card1">
-                <img src="<%=item.frontImg%>" alt="">
-           <div class="card-body1">
-            <h5 class="d-inline card-title"><%=item.name%></h5>
+                <img class="card-img1" src="<%=item.frontImg%>" alt="">
+           <div class="card-body1 text-center">
+            <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
             <span class="btn like-btn" productId="<%=item._id%>">
               <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
                <i class="fa-solid fa-heart"></i>
@@ -199,11 +140,11 @@
               <% } %>
             </span>
             <h5 class="card-title">Rs. <%=item.price%></h5>
-            <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+            <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
           <%  if(currentUser && currentUser.role == 'seller'){ %>
-              <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+              <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
               <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn1 delete-btn1">Delete</button>
               </form>
            <% } %>
            </div>
@@ -211,21 +152,25 @@
           </div>
           <% } %>  
          <% } %>
-        </div>
+       </div>
+       
+      </div>
 </section>
 
 <section class="container-fluid position-item1 mt-2">
-          <div class="product-list1">
-           <div class="product-item1">
-            <h6>Kids Furniture</h6>
-           </div>
-           <% for(let item of products){ %>
+        <div class="product-list1">
+         <div class="product-item1">
+          <h6>Kitchen Furniture</h6>
+          <a href="/Kitchen-Furniture"><button class="view-all-btn1 btn1">View All</button></a>
+         </div>
+         <div class="upper-card1">
+          <% for(let item of products){ %>
             <div class="d-flex flex-row">
-            <% if(item.type === 'Kids-Furniture'){ %>
+            <% if(item.type === 'Kitchen-Furniture'){ %>
             <div class="card1">
-                  <img src="<%=item.frontImg%>" alt="">
-             <div class="card-body1">
-              <h5 class="d-inline card-title"><%=item.name%></h5>
+                  <img class="card-img1" src="<%=item.frontImg%>" alt="">
+             <div class="card-body1 text-center">
+              <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
               <span class="btn like-btn" productId="<%=item._id%>">
                 <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
                  <i class="fa-solid fa-heart"></i>
@@ -234,11 +179,11 @@
                 <% } %>
               </span>
               <h5 class="card-title">Rs. <%=item.price%></h5>
-              <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
+              <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
             <%  if(currentUser && currentUser.role == 'seller'){ %>
-                <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
+                <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
                 <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-                  <button class="btn btn-danger">Delete</button>
+                  <button class="btn1 delete-btn1">Delete</button>
                 </form>
              <% } %>
              </div>
@@ -246,42 +191,47 @@
             </div>
             <% } %>  
            <% } %>
-          </div>
+         </div>
+         
+        </div>
 </section>
 
 <section class="container-fluid position-item1 mt-2">
-            <div class="product-list1">
+  <div class="product-list1">
              <div class="product-item1">
               <h6>Outdoor Furniture</h6>
+              <a href="/Outdoor-Furniture"><button class="view-all-btn1 btn1">View All</button></a>
              </div>
-             <% for(let item of products){ %>
-              <div class="d-flex flex-row">
-              <% if(item.type === 'Outdoor-Furniture'){ %>
-              <div class="card1">
-                    <img src="<%=item.frontImg%>" alt="">
-               <div class="card-body1">
-                <h5 class="d-inline card-title"><%=item.name%></h5>
-                <span class="btn like-btn" productId="<%=item._id%>">
-                  <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
-                   <i class="fa-solid fa-heart"></i>
-                  <% }else{ %>
-                   <i class="fa-regular fa-heart"></i>
-                  <% } %>
-                </span>
-                <h5 class="card-title">Rs. <%=item.price%></h5>
-                <a href="/products/<%=item._id%>"><button class="btn btn-info">View Detail</button></a>
-              <%  if(currentUser && currentUser.role == 'seller'){ %>
-                  <a href="/products/<%=item._id%>/edit"><button class="btn btn-warning">Edit</button></a>
-                  <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger">Delete</button>
-                  </form>
+             <div class="upper-card1">
+              <% for(let item of products){ %>
+                <div class="d-flex flex-row">
+                <% if(item.type === 'Outdoor-Furniture'){ %>
+                <div class="card1">
+                      <img class="card-img1" src="<%=item.frontImg%>" alt="">
+                 <div class="card-body1 text-center">
+                  <h5 class="d-block text-truncate card-title"><%=item.name%></h5>
+                  <span class="btn like-btn" productId="<%=item._id%>">
+                    <% if(currentUser && currentUser.wishList.includes(item._id)){ %>
+                     <i class="fa-solid fa-heart"></i>
+                    <% }else{ %>
+                     <i class="fa-regular fa-heart"></i>
+                    <% } %>
+                  </span>
+                  <h5 class="card-title">Rs. <%=item.price%></h5>
+                  <a href="/products/<%=item._id%>"><button class="btn1 view-btn1">View Detail</button></a>
+                <%  if(currentUser && currentUser.role == 'seller'){ %>
+                    <a href="/products/<%=item._id%>/edit"><button class="btn1 edit-btn1">Edit</button></a>
+                    <form class="d-inline" action="/products/<%=item._id%>?_method=DELETE" method="POST">
+                      <button class="btn1 delete-btn1">Delete</button>
+                    </form>
+                 <% } %>
+                 </div>
+                </div>
+                </div>
+                <% } %>  
                <% } %>
-               </div>
-              </div>
-              </div>
-              <% } %>  
-             <% } %>
-            </div>
+             </div> 
+  </div>
 </section>
 
 <script src="/js/common.js"></script>

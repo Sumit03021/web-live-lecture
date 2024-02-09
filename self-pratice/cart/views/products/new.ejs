@@ -2,15 +2,15 @@
 <%-include('../partials/navbar')%>
 <%-include('../partials/flash')%>
 
-<div class="row" style="margin-top: 80px;">
-  <div class="col-8 mx-auto">
-    <h2 class="display-6 text-center">Add new Product</h2>
-      <form class="row g-3 needs-validation" action="/products" method="POST" novalidate>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+<div class="form1 edit-form1 row">
+  <div class="col-12">
+    <h2 class="display-6 text-center">Add Product</h2>
+      <form class="row g-1 needs-validation" action="/products" method="POST" novalidate>
+      <div class="row g-1 align-items-center mt-4">
+        <div class="col-2">
           <label for="naam" class="form-label">Name: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="naam" name="name" required placeholder="Name of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -20,11 +20,11 @@
           </div>
         </div> 
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="img1" class="form-label">Front Image: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="img1" name="frontImg" required placeholder="Front Image of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -34,35 +34,35 @@
           </div>
         </div>
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="img2" class="form-label">Back Image 1: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="img2" name="backImg" placeholder="Back Image of the Product">
         </div> 
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="img3" class="form-label">Back Image 2: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="img3" name="backImg" placeholder="Back Image of the Product">
         </div>
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="img4" class="form-label">Back Image 3: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="img4" name="backImg" placeholder="Back Image of the Product">
         </div>  
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="price" class="form-label">Price: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="number" class="form-control text-center" id="price" name="price" required placeholder="Price of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -72,19 +72,19 @@
           </div>
         </div> 
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="about" class="form-label">About: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <textarea type="text" class="form-control text-center" id="about" name="about" rows="5" placeholder="Description of the Product"></textarea>
         </div>
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="type" class="form-label">Type: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="type" name="type" required placeholder="Type of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -94,11 +94,11 @@
           </div>
         </div>
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="category" class="form-label">Category: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="category" name="category" required placeholder="Category of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -108,11 +108,11 @@
           </div>
         </div>
       </div>
-      <div class="row g-3 align-items-center mt-1">
-        <div class="col-3">
+      <div class="row g-1 align-items-center mt-2">
+        <div class="col-2">
           <label for="collection" class="form-label">Collection: </label>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <input type="text" class="form-control text-center" id="collection" name="myCollection" required placeholder="Category of the Product">
           <div class="valid-feedback">
             Looks good!
@@ -122,9 +122,9 @@
           </div>
         </div>
       </div>
-      <div class="row g-3 justify-content-center mb-2">
-        <div class="col-3">
-          <button type="submit" class="btn btn-sm btn-primary mt-1">Add</button>
+      <div class="row g-1 align-items-center justify-content-center mt-4">
+        <div class="col-1">
+          <button type="submit" class="btn1 cart-btn1 border">Add</button>
         </div>
       </div>
     </form>
