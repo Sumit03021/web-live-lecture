@@ -141,17 +141,6 @@ let product = await Product.findById(item.product);
 return sum + (product ? product.price*item.quantity :0)
 },0);
 
-const customer = await stripe.customers.create({
-  name: 'Jenny Rosen',
-  address: {
-    line1: '510 Townsend St',
-    postal_code: '98140',
-    city: 'New delhi',
-    state: 'Delhi',
-    country: 'India',
-  },
-})
-
 const session = await stripe.checkout.sessions.create({
   line_items: [
     {
