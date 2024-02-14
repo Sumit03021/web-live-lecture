@@ -2,45 +2,66 @@
 <%-include('../partials/navbar')%>
 <%-include('../partials/flash')%>
 
-<div class="row mt-5">
-  <div class="col-lg-7 product-card mt-5">
-
-    <div class="card shadow mt-3 mx-auto" style="width: 22rem;">
-      <% for(let item of user.cart){ %>
-              <img class="img" src="<%=item.frontImg%>" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h3 class="card-title text-center"> <%= item.name %> </h3>
-                <h5 class="card-title"> Rs: <%= item.price %> </h5>
-                <!-- <p class="card-text"> <%= item.about %> </p> -->
-                <form action="/user/cart/<%=item._id%>?_method=DELETE" method="POST">
-                  <button class="btn btn-danger">Delete</button>
-                </form>
-                <!-- <form action="/user/<%=item._id%>/addmore" method="POST"> -->
-                <button><i class="minus1 fa-solid fa-minus"></i></button>
-                <div class="d-inline quantity1">Quantity: 1</div>
-                <button><i class="plus1 fa-solid fa-plus"></i></button>
-                <!-- </form> -->
-              </div>
-              <% } %>
+<section class="container-fluid position-item1 mt-2">
+  <div class="row g-4">
+    <div class="col-11 col-sm-7 mx-2 p-2 rounded-2">
+      <h6 class="cart-heading1">My Cart</h6>
+      <% for(let item of arr){ %>
+      <div class="row g-2 border mt-4 rounded-2" style="background-color: var(--color-200);position: relative;">
+          <div class="col-5">
+             <img class="cart-img1 rounded-2" src="<%=item.product.frontImg%>" alt="" /> 
           </div>
+          <div class="col-6">
+              <h5 class="d-block text-truncate cart-title1"><%=item.product.name%></h5>
+              <p class="d-block text-truncate cart-title1">Rs. <%=item.product.price%></p>
+              <div class="cart-delete1">
+                <form action="/user/cart/<%=item.product._id%>?_method=DELETE" method="POST">
+                  <button class="bnt1"><i class="fa-solid fa-xmark"></i></button>
+                </form>
+              </div>
+              <div class="cart-action1">
+                <form action="/user/<%=item.product._id%>/subtract" method="POST">
+                  <button class="btn1 delete-btn1"><i class="fa-solid fa-minus"></i></button>
+                </form>
+                  <p class="card-title">Quantity: <%=item.quantity%></p>
+                <form action="/user/<%=item.product._id%>/add" method="POST">
+                  <button class="btn1 cart-btn1" type="submit"><i class="fa-solid fa-plus"></i></button>
+                 </form>
+              </div>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  <div class="col-11 col-sm-4 border mx-auto py-2 rounded-2 px-4" style="background-color: var(--nav-color-200);">
+    <h6 class="cart-heading1">Checkout Section</h6>
+    <ul style="list-style: none;">
+      <% for(let item of arr){ %>
+      <li><span> <%=item.product.name%> --&gt; Rs. <%=item.product.price%> </span></li>
+      <% } %>
+      <li>Total Amount: Rs. <%=totalAmount%></li>
+    </ul>
+    <a class="" href="/checkout/<%=user._id%>"><button class="btn1 border view-btn1">Checkout</button></a>
+      
   </div>
-  <!-- total amount -->
-  <div class="col-lg-4 mt-5">
-    <h2 class="display-5">Checkout Page</h2>
-  <%  for(let item of user.cart){ %>
-        <div class="mb-3">
-          <h3><%= item.name%>  &nbsp &nbsp <%=item.price%></h3>
-        </div>
-        <%  } %>
-        <div class="mb-3">
-          <h2>Total Amount: Rs. <%=totalAmount%></h2>
-        </div>
-        <div class="mb-3">
-          <a href="/checkout/<%=user._id%>"><button class="btn btn-sm btn-success">Check out</button></a>
-        </div>
+  </div>
+  
+</section>
 
 
-</div>
-</div>
-<!-- <script src="/js/cart.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%-include('../partials/footer')%>

@@ -441,6 +441,33 @@ padding: 0.25rem 0.75rem;
   height: 100%;
   width: 100%;
 }
+.cart-heading1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.cart-title1{
+  font-size: 1.75rem;
+  font-weight: 550;
+  padding:0.25rem 0rem 0.25rem 1rem;
+}
+.cart-img1{
+  height: 100%;
+  width: 100%;
+}
+.cart-delete1{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.cart-delete1 button{
+  border: none;
+}
+.cart-action1{
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
 
 @media screen and (max-width:1400px){
   .navbar1{
@@ -583,6 +610,12 @@ height: 35px;
   .furniture-img1{
     height: 220px;
   }
+  .cart-heading1{
+    font-size: 1.5rem;
+  }
+  .cart-title1{
+    font-size: 1.25rem;
+  }
 }
 @media screen and (max-width:780px) {
   body{
@@ -667,6 +700,12 @@ height: 35px;
   }
   .show-heading1{
     font-size: 1.25rem;
+  }
+  .cart-heading1{
+    font-size: 1.25rem;
+  }
+  .cart-title1{
+    font-size: 1rem;
   }
 }
 @media screen and (max-width:576px) {

@@ -1,7 +1,9 @@
 <%-include('../partials/header')%>
 <%-include('../partials/navbar')%>
 <%-include('../partials/flash')%>
-<div class="position-item1 row mt-2 mx-2">
+
+<!-- show particular product details -->
+<div class="position-item1 row mt-2 mx-auto">
   <div class="col-12 col-sm-6">
     <div class="upper-show-frontimg1 card">
       <img src="<%=foundProduct.frontImg%>" alt="" class="show-frontimg1 img-fluid">
@@ -14,16 +16,17 @@
      </div>
   </div>
   <div class="col-12 col-sm-5">
-  <div class="mb-3">
+      <div class="mb-3">
    <h5 class="show-heading1 mt-1"><%=foundProduct.name%></h5>
    <h5 class="show-heading1 mt-1">Rs.: <%=foundProduct.price%></h5>
    <form action="/user/<%=foundProduct._id%>/add" method="POST" >
     <button class="btn1 cart-btn1 border mt-1">Add to Cart</button>
    </form>
-  </div>
-    <h2 class="show-heading1 mt-1">Leave your review</h2>
+      </div>
+      <div class="mt-3 mb-2">
+    <h2 class="show-heading1">Leave your review</h2>
     <form action="/products/<%= foundProduct._id %>/review" method="POST">
-        <div class="mb-1">
+        <div class="">
             <fieldset class="starability-basic">
                 <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
                 <input type="radio" id="first-rate1" name="rating" value="1" />
@@ -42,13 +45,15 @@
             <label class="form-label" for="comment">Comment: </label>
             <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
         </div>
-        <button class="btn1 edit-btn1 border">Submit</button>
+        <button class="btn1 edit-btn1 border mt-1">Submit</button>
     </form>
-</div>
+      </div>  
+  </div>
 </div>
 
+<!-- product descriptions  with review submit forms-->
 <div class="row mt-5">
-  <div class="col-10 mt-4 mx-auto border rounded-2">
+  <div class="col-12 col-sm-11 col-lg-10 mt-4 mx-auto border rounded-2">
     <h5 class="card-title mt-1">Description:</h5>
     <h6 class="card-title mt-1">Type of Furniture: <%=foundProduct.type.toUpperCase()%></h6>
     <h6 class="card-title mt-1">Category: <%=foundProduct.category.toUpperCase()%></h6>
@@ -58,14 +63,13 @@
   </div>
 </div>
 
-
 <!-- reviews that saved and shown -->
 <div class="row g-2 my-4 mx-2">
  <% if(foundProduct.reviews.length>0){ %>
   <h6 class="upper-show-heading1">Reviews of <%=foundProduct.name%></h6>
   <% } %>
+  <% for(let review of foundProduct.reviews){ %>
   <div class="col-6 col-sm-4 col-lg-3">
-    <% for(let review of foundProduct.reviews){ %>
     <div class="card">
            <div class="card-body">
             <h5 class="card-title"><%=review.userId.firstName.toUpperCase()%></h5>
@@ -76,16 +80,16 @@
                    Rated: <%=review.rating%> stars
               </p>
              <p class="text-truncate d-block card-text">Comment: <%=review.comment%></p>
-             <form action="" method="POST">
+             <form action="/review/<%=foundProduct._id%>/<%=review._id%>?_method=DELETE" method="POST">
               <button class="btn1 delete-btn1 border">Delete</button>
              </form>
            </div>
-         </div>
-      <% } %>
-   </div>
+    </div>
+  </div>
+  <% } %>
 </div>
 
-
+<!-- type of products -->
 <div class="row g-2 my-5 mx-2 border p-1 rounded-2">
   <h6 class="upper-show-heading1"><%=foundProduct.type.toUpperCase()%></h6>
   <% for(let item of products){ %>
@@ -120,6 +124,7 @@
     <% } %>
 </div>
 
+<!-- category of products -->
 <div class="row g-2 my-5 mx-2 border p-1 rounded-2">
   <h6 class="upper-show-heading1"><%=foundProduct.category.toUpperCase()%></h6>
   <% for(let item of products){ %>
@@ -154,6 +159,7 @@
     <% } %>
 </div>
 
+<!-- collection of products -->
 <div class="row g-2 my-5 mx-2 border p-1 rounded-2">
   <h6 class="upper-show-heading1"><%=foundProduct.myCollection.toUpperCase()%> Collections</h6>
   <% for(let item of products){ %>
@@ -187,5 +193,6 @@
     <% } %>
     <% } %>
 </div>
+
 <script src="/js/common.js"></script>
 <%-include('../partials/footer')%>

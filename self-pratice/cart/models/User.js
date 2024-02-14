@@ -36,8 +36,8 @@ const userSchema = new mongoose.Schema({
     ref:"Address"
   }],
   cart:[{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"Product",
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"Cart"
   }]
 },{timestamps:true})
 

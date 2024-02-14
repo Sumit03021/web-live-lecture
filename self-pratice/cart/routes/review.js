@@ -15,7 +15,7 @@ router.post('/products/:id/review',isLoggedIn ,validateReview ,async(req,res)=>{
     await product.reviews.push(newReview);
     await newReview.save();
     await product.save();
-    req.flash('success',`${newReview.userId.firstName} added own review for ${product.name}.`)
+    req.flash('success',`${req.user.firstName} added own review for ${product.name}.`)
     res.redirect(`/products/${id}`);
   }
   catch(e){
@@ -23,11 +23,13 @@ router.post('/products/:id/review',isLoggedIn ,validateReview ,async(req,res)=>{
   }
 })
 
-router.delete('/review/:id',isLoggedIn ,async(req,res)=>{
+router.delete('/review/:productId/:id',isLoggedIn ,async(req,res)=>{
   try{
-    let {id} = req.params;
+    let {id,productId} = req.params;
+    let product = await Product.findById(productId);
     await Review.findByIdAndDelete(id);
-    res.redirect('/products')
+    req.flash('success',`${req.user.firstName} deleted own review for ${product.name}`)
+    res.redirect(`/products/${productId}`)
   }
   catch(e){
     res.status(500).render('error',{error:e.message})

@@ -20,56 +20,56 @@ selectElement.addEventListener('change', (event) => {
         <div class="filter1">
           <h5 class="filter-heading1">Category</h5>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="chair">
-          <label for="cat">Office Chairs</label>
+          <input type="checkbox" name="category" id="cat-1" value="chair">
+          <label for="cat-1">Office Chairs</label>
           </div>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="desks">
-          <label for="cat">Desks</label>
+          <input type="checkbox" name="category" id="cat-2" value="desks">
+          <label for="cat-2">Desks</label>
           </div>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="stools">
-          <label for="cat">Stools</label>
+          <input type="checkbox" name="category" id="cat-3" value="stools">
+          <label for="cat-3">Stools</label>
           </div>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="executive chair">
-          <label for="cat">Executive Chairs</label>
+          <input type="checkbox" name="category" id="cat-4" value="executive chair">
+          <label for="cat-4">Executive Chairs</label>
           </div>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="storage units">
-          <label for="cat">Storage Units</label>
+          <input type="checkbox" name="category" id="cat-5" value="storage units">
+          <label for="cat-5">Storage Units</label>
           </div>
           <div class="lower-filter1">
-          <input type="checkbox" name="category" id="cat" value="workstation">
-          <label for="cat">Workstations</label>
+          <input type="checkbox" name="category" id="cat-6" value="workstation">
+          <label for="cat-6">Workstations</label>
           </div>
         </div>
 
         <div class="filter1">
          <h5 class="filter-heading1">Collections</h5>
          <div class="lower-filter1">
-         <input type="checkbox" id="coll" name="myCollection" value="Tiramoli">
-         <label for="coll">Tiramoli</label>
+         <input type="checkbox" id="coll-1" name="myCollection" value="Tiramoli">
+         <label for="coll-1">Tiramoli</label>
          </div>
          <div class="lower-filter1">
-         <input type="checkbox" id="coll" name="myCollection" value="Anthony">
-         <label for="coll">Anthony</label>
+         <input type="checkbox" id="coll-2" name="myCollection" value="Anthony">
+         <label for="coll-2">Anthony</label>
          </div>
          <div class="lower-filter1">
-         <input type="checkbox" id="coll" name="myCollection" value="Tiramolla">
-         <label for="coll">Tiramolla</label>
+         <input type="checkbox" id="coll-3" name="myCollection" value="Tiramolla">
+         <label for="coll-3">Tiramolla</label>
          </div>
         </div>
         
         <div class="filter1">
          <h5 class="filter-heading1">Price</h5>
          <div class="lower-filter1">
-         <input type="checkbox" name="high" id="price">
-         <label for="price">High to Low</label>
+         <input type="checkbox" name="high" id="price-1">
+         <label for="price-1">High to Low</label>
          </div>
          <div class="lower-filter1">
-         <input type="checkbox" name="low" id="price">
-         <label for="price">Low to High</label>
+         <input type="checkbox" name="low" id="price-2">
+         <label for="price-2">Low to High</label>
          </div>
         </div>    
 
@@ -83,56 +83,56 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Bedrooms">
-    <label for="cat">Bedrooms</label>
+    <input type="checkbox" name="category" id="cat-1" value="Bedrooms">
+    <label for="cat-1">Bedrooms</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Monoblock Kitchen">
-    <label for="cat">Monoblock Kitchen</label>
+    <input type="checkbox" name="category" id="cat-2" value="Monoblock Kitchen">
+    <label for="cat-2">Monoblock Kitchen</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="wardrobes">
-    <label for="cat">Wardrobes</label>
+    <input type="checkbox" name="category" id="cat-3" value="wardrobes">
+    <label for="cat-3">Wardrobes</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="desks">
-    <label for="cat">Desks</label>
+    <input type="checkbox" name="category" id="cat-4" value="desks">
+    <label for="cat-4">Desks</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="sofas">
-    <label for="cat">Sofa</label>
+    <input type="checkbox" name="category" id="cat-5" value="sofas">
+    <label for="cat-5">Sofa</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="headboards">
-    <label for="cat">Headboards</label>
+    <input type="checkbox" name="category" id="cat-6" value="headboards">
+    <label for="cat-6">Headboards</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Tiramoli">
-   <label for="coll">Tiramoli</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Tiramoli">
+   <label for="coll-1">Tiramoli</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Sameer">
-   <label for="coll">Sameer</label>
+   <input type="checkbox" id="coll-2" name="myCollection" value="Sameer">
+   <label for="coll-2">Sameer</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Saif">
-   <label for="coll">Saif</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Saif">
+   <label for="coll-3">Saif</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     
@@ -145,52 +145,52 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="chair">
-    <label for="cat">Chairs</label>
+    <input type="checkbox" name="category" id="cat-1" value="chair">
+    <label for="cat-1">Chairs</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="tables">
-    <label for="cat">Tables</label>
+    <input type="checkbox" name="category" id="cat-2" value="tables">
+    <label for="cat-2">Tables</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Booths">
-    <label for="cat">Booths</label>
+    <input type="checkbox" name="category" id="cat-3" value="Booths">
+    <label for="cat-3">Booths</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="canteen tables">
-    <label for="cat">Canteen Tables</label>
+    <input type="checkbox" name="category" id="cat-4" value="canteen tables">
+    <label for="cat-4">Canteen Tables</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="storage units">
-    <label for="cat">Storage Units</label>
+    <input type="checkbox" name="category" id="cat-5" value="storage units">
+    <label for="cat-5">Storage Units</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Saif">
-   <label for="coll">Saif</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Saif">
+   <label for="coll-1">Saif</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Anthony">
-   <label for="coll">Anthony</label>
+   <input type="checkbox" id="coll=2" name="myCollection" value="Anthony">
+   <label for="coll-2">Anthony</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Tiramolla">
-   <label for="coll">Tiramolla</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Tiramolla">
+   <label for="coll-3">Tiramolla</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     
@@ -203,48 +203,48 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="furnishing">
-    <label for="cat">Furnishing</label>
+    <input type="checkbox" name="category" id="cat-1" value="furnishing">
+    <label for="cat-1">Furnishing</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="hairdresser chair">
-    <label for="cat">Hairdresser Chairs</label>
+    <input type="checkbox" name="category" id="cat-2" value="hairdresser chair">
+    <label for="cat-2">Hairdresser Chairs</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Display units">
-    <label for="cat">Display Units</label>
+    <input type="checkbox" name="category" id="cat-3" value="Display units">
+    <label for="cat-3">Display Units</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Display Cases">
-    <label for="cat">Display Cases</label>
+    <input type="checkbox" name="category" id="cat-4" value="Display Cases">
+    <label for="cat-4">Display Cases</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Manish">
-   <label for="coll">Manish</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Manish">
+   <label for="coll-1">Manish</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Ayesha">
-   <label for="coll">Ayesha</label>
+   <input type="checkbox" id="coll-2" name="myCollection" value="Ayesha">
+   <label for="coll-2">Ayesha</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Ayush">
-   <label for="coll">Ayush</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Ayush">
+   <label for="coll-3">Ayush</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     
@@ -257,52 +257,52 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Mini kitchen">
-    <label for="cat">Mini Kitchen</label>
+    <input type="checkbox" name="category" id="cat-1" value="Mini kitchen">
+    <label for="cat-1">Mini Kitchen</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="kitchen">
-    <label for="cat">Kitchen</label>
+    <input type="checkbox" name="category" id="cat-2" value="kitchen">
+    <label for="cat-2">Kitchen</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Free standing unit">
-    <label for="cat">Free Standing Units</label>
+    <input type="checkbox" name="category" id="cat-3" value="Free standing unit">
+    <label for="cat-3">Free Standing Units</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="worktops">
-    <label for="cat">Worktops</label>
+    <input type="checkbox" name="category" id="cat-4" value="worktops">
+    <label for="cat-4">Worktops</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Cookers">
-    <label for="cat">Cookers</label>
+    <input type="checkbox" name="category" id="cat-5" value="Cookers">
+    <label for="cat-5">Cookers</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Tiramoli">
-   <label for="coll">Tiramoli</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Tiramoli">
+   <label for="coll-1">Tiramoli</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Ayush">
-   <label for="coll">Ayush</label>
+   <input type="checkbox" id="coll-2" name="myCollection" value="Ayush">
+   <label for="coll-2">Ayush</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Sameer">
-   <label for="coll">Sameer</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Sameer">
+   <label for="coll-3">Sameer</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     
@@ -315,44 +315,44 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Bedrooms">
-    <label for="cat">Bedrooms</label>
+    <input type="checkbox" name="category" id="cat-1" value="Bedrooms">
+    <label for="cat-1">Bedrooms</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="sofas and armchair">
-    <label for="cat">Sofas & Armchair</label>
+    <input type="checkbox" name="category" id="cat-2" value="sofas and armchair">
+    <label for="cat-2">Sofas & Armchair</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="tables and chairs">
-    <label for="cat">Tables & Chairs</label>
+    <input type="checkbox" name="category" id="cat-3" value="tables and chairs">
+    <label for="cat-3">Tables & Chairs</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Saif">
-   <label for="coll">Saif</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Saif">
+   <label for="coll-1">Saif</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Anthony">
-   <label for="coll">Anthony</label>
+   <input type="checkbox" id="coll-2" name="myCollection" value="Anthony">
+   <label for="coll-2">Anthony</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Tiramolla">
-   <label for="coll">Tiramolla</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Tiramolla">
+   <label for="coll-3">Tiramolla</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     
@@ -365,56 +365,56 @@ selectElement.addEventListener('change', (event) => {
     <div class="filter1">
     <h5 class="filter-heading1">Category</h5>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="armchair">
-    <label for="cat">Armchairs</label>
+    <input type="checkbox" name="category" id="cat-1" value="armchair">
+    <label for="cat-1">Armchairs</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="sofa">
-    <label for="cat">Sofa</label>
+    <input type="checkbox" name="category" id="cat-2" value="sofa">
+    <label for="cat-2">Sofa</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="tables">
-    <label for="cat">Tables</label>
+    <input type="checkbox" name="category" id="cat-3" value="tables">
+    <label for="cat-3">Tables</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="benches">
-    <label for="cat">Benches</label>
+    <input type="checkbox" name="category" id="cat-4" value="benches">
+    <label for="cat-4">Benches</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="Daybeds">
-    <label for="cat">Daybeds</label>
+    <input type="checkbox" name="category" id="cat-5" value="Daybeds">
+    <label for="cat-5">Daybeds</label>
     </div>
     <div class="lower-filter1">
-    <input type="checkbox" name="category" id="cat" value="low lounge chair">
-    <label for="cat">Low Lounge Chairs</label>
+    <input type="checkbox" name="category" id="cat-6" value="low lounge chair">
+    <label for="cat-6">Low Lounge Chairs</label>
     </div>
   </div>
 
   <div class="filter1">
    <h5 class="filter-heading1">Collections</h5>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Ayush">
-   <label for="coll">Ayush</label>
+   <input type="checkbox" id="coll-1" name="myCollection" value="Ayush">
+   <label for="coll-1">Ayush</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Manish">
-   <label for="coll">Manish</label>
+   <input type="checkbox" id="coll-2" name="myCollection" value="Manish">
+   <label for="coll-2">Manish</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" id="coll" name="myCollection" value="Sameer">
-   <label for="coll">Sameer</label>
+   <input type="checkbox" id="coll-3" name="myCollection" value="Sameer">
+   <label for="coll-3">Sameer</label>
    </div>
   </div>
   
   <div class="filter1">
    <h5 class="filter-heading1">Price</h5>
    <div class="lower-filter1">
-   <input type="checkbox" name="high" id="price">
-   <label for="price">High to Low</label>
+   <input type="checkbox" name="high" id="price-1">
+   <label for="price-1">High to Low</label>
    </div>
    <div class="lower-filter1">
-   <input type="checkbox" name="low" id="price">
-   <label for="price">Low to High</label>
+   <input type="checkbox" name="low" id="price-2">
+   <label for="price-2">Low to High</label>
    </div>
   </div>    
     

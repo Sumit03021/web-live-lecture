@@ -114,50 +114,80 @@ router.get('/:type/:category',async(req,res)=>{
 //   res.render('products/furniture',{products});
 // })
 
+// router.post('/filter', async (req, res) => {
+//   let { category, myCollection, high, low, selectedValue } = req.body;
+//   let priceProduct = [];
+//   let categoryProduct = [];
+//   let collectionProduct = [];
+//   console.log(myCollection);
+
+//   const filters = [
+//     { type: selectedValue, ...(myCollection && { myCollection }) },
+//     { type: selectedValue, ...(category && { category }) },
+//   ];
+
+//   for (const filter of filters) {
+//     if (filter) {
+//       const products = await Product.find(filter);
+//       if (high || low) {
+//         for (let i = 0; i < products.length; i++) {
+//           for (let j = 0; j < products.length - i - 1; j++) {
+//             if (high && products[j].price < products[j + 1].price) {
+//               const temp = products[j];
+//               products[j] = products[j + 1];
+//               products[j + 1] = temp;
+//             } else if (low && products[j].price > products[j + 1].price) {
+//               const temp = products[j];
+//               products[j] = products[j + 1];
+//               products[j + 1] = temp;
+//             }
+//           }
+//         }
+//       }
+//       if (filter.type === selectedValue) {
+//         priceProduct = products;
+//       } else if (filter.myCollection) {
+//         collectionProduct = products;
+//       } else if (filter.category) {
+//         categoryProduct = products;
+//       }
+//     }
+//   }
+
+//   let products = [...priceProduct, ...categoryProduct, ...collectionProduct];
+//   if (!products.length) {
+//     products = await Product.find({ type: selectedValue });
+//   }
+
+//   res.render('products/furniture', { products });
+// });
+
 router.post('/filter', async (req, res) => {
-  let { category, myCollection, high, low, selectedValue } = req.body;
-  let priceProduct = [];
-  let categoryProduct = [];
-  let collectionProduct = [];
-  // console.log(selectedValue);
+  const { selectedValue, myCollection, category, price } = req.body;
 
-  const filters = [
-    { type: selectedValue, ...(myCollection && { myCollection }) },
-    { type: selectedValue, ...(category && { category }) },
-  ];
+  let query = {};
 
-  for (const filter of filters) {
-    if (filter) {
-      const products = await Product.find(filter);
-      if (high || low) {
-        for (let i = 0; i < products.length; i++) {
-          for (let j = 0; j < products.length - i - 1; j++) {
-            if (high && products[j].price < products[j + 1].price) {
-              const temp = products[j];
-              products[j] = products[j + 1];
-              products[j + 1] = temp;
-            } else if (low && products[j].price > products[j + 1].price) {
-              const temp = products[j];
-              products[j] = products[j + 1];
-              products[j + 1] = temp;
-            }
-          }
-        }
-      }
-      if (filter.type === selectedValue) {
-        priceProduct = products;
-      } else if (filter.myCollection) {
-        collectionProduct = products;
-      } else if (filter.category) {
-        categoryProduct = products;
-      }
-    }
+  if (selectedValue) {
+    query.type = selectedValue;
   }
 
-  let products = [...priceProduct, ...categoryProduct, ...collectionProduct];
-  if (!products.length) {
-    products = await Product.find({ type: selectedValue });
+  if (myCollection && myCollection.length > 0) {
+    query.myCollection = { $in: myCollection };
   }
+
+  if (category && category.length > 0) {
+    query.category = { $in: category };
+  }
+
+  if (price === 'high') {
+    query.price = { $gt: 0 };
+    products = products.sort((a, b) => b.price - a.price);
+  } else if (price === 'low') {
+    query.price = { $gt: 0 };
+    products = products.sort((a, b) => a.price - b.price);
+  }
+
+  const products = await Product.find(query);
 
   res.render('products/furniture', { products });
 });
