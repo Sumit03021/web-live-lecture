@@ -1,0 +1,12 @@
+cat.s,dog.js----app.js----index.js-----index.html---react(path never change heirarachy)
+
+
+
+
+
+
+
+
+
+
+

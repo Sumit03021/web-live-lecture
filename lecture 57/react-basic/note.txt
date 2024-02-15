@@ -1,0 +1,22 @@
+js library flexible,
+single page application (more pages make but not reloading aur refershing), faster loading bcoz from client side working.
+user interface(frontend)
+DOM operationally heavy so that network call increases.
+
+react use virtual dom that only use and replace that part that changed. faster call for dom.
+Search engine optimisation (SEO ) is very poor due to no reloading and refreshing pages so that only few footfall exist shows seo poor.
+
+component based architecture used in reacts--portion wise(divide and rule code.) can be reused again where can be use call components
+2 type of components---class based --stateful, dynamic changes
+(ignore the class components)---life cycle method learned important.........
+
+functional based components---stateless, only static changes, 
+(use with Hooks for dynamic changes in code to displays.)
+
+js library is Reactjs and nextjs is the reactjs framework with updated versions and stability of new versions that not satble in 18th versions of reactjs.
+
+
+
+
+
+
