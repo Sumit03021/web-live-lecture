@@ -2,7 +2,7 @@ import React from 'react'
 
 function Person() {
   return (
-    <div>Person</div>
+    <div>hi i am Person</div>
   )
 }
 
