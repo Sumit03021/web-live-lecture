@@ -1,0 +1,25 @@
+wrapper components ---we donot use as much
+parent components children to wrap----add functionality 
+basically used for the design purpose only
+
+the entire child components as props wrapper in the parents components
+
+useEffect()----side effect--fetch,settimout,setinterval omponents ko render na kare.
+
+useeffect()---made with 3 components of lifecycle methods --componentDidMount()--render,
+componentDidUnmount()--destroy,componentDidUpdate()-- state chnage
+
+useeffect(()=>{},[array--dependency arrays]);
+1st -> component render--- useeffect();
+2nd --> state and props(change) ---useeffect();
+ 
+
+
+
+
+
+
+
+
+
+
