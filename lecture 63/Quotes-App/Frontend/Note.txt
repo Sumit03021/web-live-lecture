@@ -1,0 +1,7 @@
+anchor is not used in react bcoz it refershing the page show use link tag inplace of anchor tag from react-router-dom.
+
+routes---provide pages and datas but apis ---provides only data for frontend.
+
+CORS -- cross origin resource sharing
+5173 and 8080---nahi karne de sakta  ----  npm i cors 
+permission from backend that give you a data policy.

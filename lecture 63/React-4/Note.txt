@@ -1,0 +1,25 @@
+useref()---DOM Chanes--predefined texts
+usecase-1 hook--dom element --refernces
+
+usecase-2 state maintain between two render(preserve and maintain)
+
+
+--------------routing--------------
+very imp concept---react ke paas khudka router nahi hai use 3rd party applications---react router-dom
+
+SPA--routing use ke baad bhi
+client side bundling and client side rendering.
+
+library--js data-- dom manipulating ---refershing not----client side rendering
+examples--- 3pages --3 server call 3 baar alag page aages
+1 server call --saara bundler --routing --data aapne aap chala--new data again apne aap chala aayega,
+
+useNavigate()---use in react-router-dom for use in routing.
+
+
+
+
+
+
+
+
