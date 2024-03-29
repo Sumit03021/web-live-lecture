@@ -1,0 +1,19 @@
+js
+basics--- array, objects, fucntions , 
+datatypes , bit manipulation, operators , 
+call back fucntions , object --- update, spread, this keyword, 
+string --- various method in built operators,
+array ---in built methods (for each, map ,filter, reduce, sort, ),
+loop ---(for in , for of )
+let, var, const --differences,
+global execution context---memory phase, code execution,
+hoisting, scoping, dead temporal zone , lexical environment ,
+closure , prototype , promises, async /await functions, (oops in js)
+
+ternary operators , web api(settimout , setinterval, fetch, url, location, )
+
+cb queue, job queue,
+memoiation, inheritance, currying, hof, iife, genetors, functional programming, DOM. eventlisteners.
+
+
+react ---hooks with example, components (HOC), 
